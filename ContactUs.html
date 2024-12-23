@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="https://i.ibb.co/7yStqyv/sdadasd.png" href="https://i.ibb.co/7yStqyv/sdadasd.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- para automatic mo adjsut sa phone screen ang website-->
+    <meta charset="UTF-8">
+    <title>Talisay City College-online-form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;  /* Sets the font style for the body */
+            max-width: 600px; /* Limits the maximum width of the body */
+            margin: 0 auto; /* Centers the body content horizontally */
+            padding: 20px; /* Adds padding around the body content */
+            background-image: url('https://i.ibb.co/K77tZ0j/TCC-LOGO-XL.jpg'); background-size: cover; background-position: center;
+            background-size: 1200px;
+            opacity: 95%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {  /*Limits the maximum width of the container */
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        h2 {
+            color: #DE9532;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #158BDA;
+            margin-top: 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"] , textarea,input[type="radio"],select
+        ,input[type="file"],input[type="submit"]
+        {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .row input {
+            width: calc(48% - 10px);
+        }
+        .required{
+            color: #158BDA  ;
+        }
+        .required::after {
+            content: " *";
+            color: red;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #DE9532;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+        .SDI{
+           color: #DE9532; 
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+            width: auto;
+        }
+
+        .checkbox-container label {
+            margin-top: 0;
+        }
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #00AF26;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://i.ibb.co/vXRJSGh/tcc-removebg-preview.png" alt="tcc-logo img">
+            <div class="header-text">
+                <h2>MESSAGE US</h2>
+                <p>Our representative would love to assist you</p>
+            </div>
+        </div>
+    
+    <form>
+        <label class="required">Full Name</label>
+          <div class="row">
+             <input type="text"
+             placeholder="First Name">
+             <input type="text" placeholder="Last Name">
+          </div>
+
+        <label class="required">E-mail</label>
+        <input type="email">
+        
+        <label class="required">Phone Number</label>
+        <input type="tel" placeholder="(+63) 00-000-0000">
+
+        <label class="required">Address</label>
+        <input type="text" placeholder="Street Address">
+        
+        
+        <div class="row">
+            <input type="text" placeholder="City"> <!-- Input for city -->
+            <input type="text" placeholder="Province"> <!-- Input for province -->
+        </div>
+        
+        <!-- Input for postal/zip code -->
+        <input type="number" placeholder="Postal / Zip Code">
+        
+        <!-- Subheading for school data information -->
+        <div class="row">
+          <h4 class="SDI">School Data Information</h4>
+        </div>
+        
+        <div class="row">
+          <input type="text" placeholder="School ID Number">  <!-- Input for school ID number -->
+          <input type="text" placeholder="Section"> <!-- Input for section -->
+        </div>
+        
+        <div class="row">
+          <label class="required">Year Level</label>
+        </div>
+
+        <!-- Dropdown for selecting year level -->
+        <div class="row">
+          <select class="row">
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+          </select>
+          </div>
+          
+          <!-- Label for course field -->
+          <div class="row">
+          <label class="required">Course</label>
+          </div>
+          
+          <!-- Dropdown for selecting course -->
+          <div class="row">
+          <select class="row">
+            <option>BSIT - Bachelor of Science in Industrial Technology</option>
+            <option>BSHM - Bachelor of Science in Hospitality Management</option>
+            <option>BSED Bachelor of Secondary Education</option>
+            <option>BEED - Bachelor of Elementary Education</option>
+            <option>BSTM - Bachelor of Science in Tourism Management</option>
+            <option>BAPS / ABPolSci - Bachelor of Arts in Political Science</option>
+            
+          </select>
+        </div>
+
+         <!-- Input for file upload -->
+        <div class="row">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="resume" class="required">Upload your Study load as a proof:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            </form>
+        </div>
+
+       
+
+        <label>Message</label>
+        <textarea></textarea>
+        
+         <!-- Checkbox for agreeing to terms and conditions -->
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms">
+            <label for="terms" class="required">I agree to the terms and conditions</label>
+        </div>
+    
+        
+         <!-- Submit button --> 
+
+        <input class="submit-button" type="submit" value="Submit">
+
+        
+    </form>
+</body>
+</html>

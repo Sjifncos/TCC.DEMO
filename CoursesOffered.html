@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="https://i.ibb.co/7yStqyv/sdadasd.png" href="https://i.ibb.co/7yStqyv/sdadasd.png"> <!-- FAVICON  TO SHOW TCC LOGO-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- para automatic mo adjsut sa phone screen ang website-->
+    <meta charset="UTF-8">
+    <title>Talisay City College</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            
+        }
+        body {
+            background-color: #f0f0f0;
+            display: flex; /* Use flexbox layout */
+            flex-direction: column; /* Stack elements vertically */
+            min-height: 100vh;
+        }
+        main {
+    flex: 1; /* Allow main content to grow and fill space */
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #DE9532, #158BDA);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+
+        }
+        .header {
+            background-color: #158BDA;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .tcc-headlogo {
+            margin-left: 164px;
+            width: 100px;
+            height: 100px;
+            transition: all 0.3s ease; /* Added para sa smooth transition */
+            cursor: pointer; /* adds hand cursor kung e hover */
+        }
+        .tccportal{
+            margin-left: 800px;
+        }
+        .address {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .tcc {
+            margin-top: -35px;
+            font-size: 18px;
+            margin-left: 50px;
+        }
+        .tcc:hover{
+            color: #DE9532;
+            transition: all 0.3s ease;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            font-size: 24px;
+            color: #000;
+        }
+        .contact-btn {
+            background-color: #DE9532;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 164px;
+            transition: all 0.3s ease; /* mag Add ug smooth transition */
+        }   
+        .contact-btn:hover {
+            background-color: #00AF26;
+            transform: scale(1.2);
+            color: white;
+        }
+        nav {
+            background-color: #1f98e9;
+            padding: 10px 0;
+        }   
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        nav ul li {
+            margin: 0 35px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Added transition for smooth effect */
+            display: inline-block; /* Added to make transform work */
+        }
+        nav ul li a[href="CoursesOffered.html"] h4 {
+            color: #DE9532;
+        }
+
+        /* Hover effect */
+        nav ul li a:hover {
+            color: #DE9532;
+            transform: scale(1.2); /* Added scale transform */
+        }
+
+        /* Active link */
+        nav ul li a.active {
+            color: #DE9532;
+        }
+        .tccportal {
+            font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+            white-space: nowrap; /* Prevent text wrapping */
+            transition: all 0.3s ease; /* Smooth transition for all changes */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0;
+            padding: 0 15px;
+            }
+
+          /* Single hover effect on My TCCe Portal */
+          .tccportal:hover {
+            color: #DE9532;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+        .tccportal .my-tcce {
+            color: #de9532;
+        }
+        .tccportal .portal {
+            color: black;
+        }
+        .container{
+            flex: 1;
+            max-width: 1224px;
+            height: 500px;
+            width: 90%;
+            margin: auto;
+            padding: 40px 0;
+        }
+        footer {
+            background-color: #158BDA;
+            color: #fff;
+            padding: 20px;
+            margin-top: auto;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .social-media, .subscribe {
+            flex: 1;
+            margin-bottom: 20px;
+            
+        }
+        .informed{
+            margin-bottom: 10px;
+        }
+        .subscribe input[type="email"] {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 70%;
+        }
+        .subscribe button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #DE9532;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .subscribe button:hover{
+            background-color: #00AF26;
+            transition: all 0.3s ease;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer-links p {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .hamburger:hover {
+        color: #DE9532; /* Change color on hover */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Search Bar Styles */
+        .search-section {
+            margin-bottom: 40px;
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 12px 30px;
+            margin-left: 5px;
+            background-color: #DE9532;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .search-button:hover {
+            background-color: #00AF26;
+        }
+
+        /* Latest News Styles */
+        .latest-news-heading {
+            font-size: 28px;
+            color: #DE9532;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-slider {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .news-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 30px;
+        }
+
+        .news-item {
+            flex: 0 0 calc(50% - 15px);
+            min-width: calc(50% - 15px);
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #ffa000;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .read-more:hover {
+            color: #ff6f00;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        /* Navigation Arrows */
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: #158BDA;
+            opacity: 75%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            z-index: 10;
+            font-size: 20px;
+        }
+
+        .slider-nav:hover {
+            background:#DE9532;
+            opacity: 75%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Slider Dots */
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background: #ffa000;
+        }
+
+        .more-news-btn {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: #ffa000;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .more-news-btn:hover {
+            background: #00AF26;
+        }
+        .events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .events-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .event-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .event-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .event-content {
+    padding: 20px;
+  }
+
+  .event-title {
+    font-size: 20px;
+    color: #ff9800;
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+
+  .event-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .event-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .event-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 12px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
+
+  .read-more {
+    display: inline-block;
+    color: #158BDA;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+    color: #00AF26;
+  }
+  .school-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.school-item {
+    position: relative;  /* Add this line */
+    flex: 0 1 calc(33.333% - 20px);
+    max-width: 350px;
+    min-width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.school-item:hover {
+    transform: scale(1.05);
+}
+
+.school-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.school-item h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.school-item .hover-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #158bda48;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.school-item:hover .hover-description {
+    opacity: 1;
+}
+
+
+
+        /*FOR PHONE ORIENTATION*/
+
+    @media (max-width: 768px) {
+        nav{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            max-height: 80vh;
+            background-color: #1F98E9;
+            width: 100%;
+        }
+        .nav-list{
+            position: sticky;
+            top: 0;
+            background-color: #1F98E9;
+            z-index: 100;
+            max-height: 80vh;
+        }
+            .hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    margin-right: 10px;
+    text-align: right; /* Align the hamburger to the right */
+    float: right; /* Float the hamburger to the right */
+}
+
+    .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+    }
+
+    /* Position the lines */
+    .hamburger span:nth-child(1) {
+    top: 0;
+    }
+    .hamburger span:nth-child(2) {
+    top: 9px;
+    }
+    .hamburger span:nth-child(3) {
+    top: 18px;
+    }
+
+    /* Hover effect */
+    .hamburger:hover span {
+    background-color: #DE9532;
+    }
+
+    /* Transform into an X when active */
+    .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+    }
+    .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+    }
+    .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+    }
+
+    /* Add styles for the navigation list */
+    .nav-list {
+    display: none;
+    }
+
+    .nav-list.show {
+    display: block; /* Show the nav list when the hamburger is clicked */
+    align-content: center;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .tcc-headlogo, .contact-btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .address {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .photo-gallery{
+        flex-direction: column;
+
+    }
+    nav ul {
+        display: none; /* Hide navigation menu by default */
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 10px ;
+    }
+    nav ul li a {
+        display: block;
+        text-align: center; /* Center text inside nav buttons */
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tcc {
+        margin-top: 15px;
+    }
+    .tcc{
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    .informed{
+        margin-bottom: 10px;
+        margin-left: 15px;
+    }
+    .container{
+        padding: 20px 0;
+    }
+    .tccportal {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Vertical spacing */
+        justify-content: center; /* Center horizontally */
+        text-align: center;
+    }
+
+    /* Adjust logo container for better mobile layout */
+    .logo {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    /* Updated Media Query for News Slider */
+@media (max-width: 768px) {
+    .news-container {
+        gap: 0;
+    }
+
+    .news-item {
+        flex: 0 0 100%;
+        min-width: 100%;
+        margin-right: 0;
+    }
+
+    .news-image {
+        height: 200px;
+    }
+
+    .slider-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+    /* Show all four dots on mobile */
+    .slider-dots .dot {
+        display: inline-block;
+    }
+}
+
+/* Base styles for dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hide 3rd and 4th dots by default (large screens) */
+.dot:nth-child(3),
+.dot:nth-child(4) {
+    display: none;
+}
+
+.dot.active {
+    background: #ffa000;
+}
+
+/* Add smooth transitions for slider */
+.news-container {
+    transition: transform 0.4s ease-in-out;
+}
+
+            .search-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+
+
+
+            .search-input, .search-button {
+                width: 100%;
+                border-radius: 4px;
+            }
+            .search-button{
+                margin-left: -1px;
+            }
+}
+
+        /* Media Queries for Large Screens */
+        @media (min-width: 1024px) {
+            .tcc-headlogo {
+                width: 60px;
+                height: 60px;
+            }
+            .contact-btn {
+                padding: 15px 30px;
+            }
+            .hamburger {
+            display: none; /* Hide hamburger icon for large screens */
+            }
+            .tccportal {
+            margin-left: 700px; /* Adjust spacing */
+            }
+
+           
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="tcc-headlogo" src="https://i.ibb.co/vqJWcwZ/TCC-BG.png" alt="Talisay City College Logo">
+            <div>
+                <h1 style="color: white;">TALISAY CITY COLLEGE</h1>
+                <p class="address" style="color: white;" >V.H.Garces, Poblacion, Talisay, 6045 Cebu</p>
+            </div>
+            <h2 class="tccportal">
+                <span class="my-tcce">My TCCe</span> <span class="portal">Portal</span>
+            </h2>
+        </div>
+        <a href="ContactUs.html" target="_blank">
+            <button class="contact-btn">CONTACT US</button>
+        </a>
+    </header>
+    
+    <nav>
+        <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> <!-- Hamburger Icon -->  
+    <ul class="nav-list">
+        <li><a href="index.html">
+            <h4>Home</h4></a>
+        </li>
+        <li><a href="about us.html">
+            <h4>About</h4></a>
+        </li>
+        <li><a href="History.html">
+            <h4>History</h4></a>
+        </li>
+        <li><a href="Facilities.html">
+            <h4>Facilities</h4>
+        </a></li>
+        <li><a href="CoursesOffered.html">
+            <h4>Courses Offered</h4></a>
+        </li>
+    </ul>
+    </nav>
+    <main>
+        <br>
+        <br>
+        <p style="text-align: center; font-size:20px; color: #ddd;" >The Talisay City College is made up of eleven under degree-granting, academic schools. <br> While The Talisay City College has its own personality and area of expertise, <br> TCC frequently work together to offer interdisciplinary degree programs and undertake complex research.</p>
+        <br>
+        <br>
+        <div class="school-container">
+            <div class="school-item">
+                <img src="https://i.ibb.co/FmWGwGj/beed.jpg" alt="Bachelor of Elementary Education">
+                <h3>Bachelor of Elementary Education</h3>
+                <div class="hover-description">
+                    Prepares future educators to teach elementary-level students, focusing on child development, teaching methodologies, and creating engaging learning environments.
+                </div>
+            </div>
+            <div class="school-item">
+                <img src="https://i.ibb.co/BLnFCRZ/pe.jpg" alt="Bachelor of Physical Education">
+                <h3>Bachelor of Physical Education</h3>
+                <div class="hover-description">
+                    Trains students in sports science, coaching techniques, physical fitness, and health education, preparing them for careers in athletics, coaching, and wellness.
+                </div>
+            </div>
+            <div class="school-item">
+                <img src="https://pwc.edu.ph/wp-content/uploads/2019/03/hospitality-management-davao.jpg" alt="Bachelor of Science in Hospitality Management">
+                <h3>Bachelor of Science in Hospitality Management</h3>
+                <div class="hover-description">
+                    Provides comprehensive training in hotel operations, tourism services, event management, and customer service within the hospitality industry.
+                </div>
+            </div>
+            <div class="school-item">
+                <img src="https://lpubatangas.edu.ph/wp-content/uploads/2021/06/DSC_3773-scaled.jpg" alt="Bachelor of Science in Industrial Technology">
+                <h3>Bachelor of Science in Industrial Technology</h3>
+                <div class="hover-description">
+                    Equips students with technical skills in manufacturing, industrial processes, equipment maintenance, and technological innovation for various industrial sectors.
+                </div>
+            </div>
+            <div class="school-item">
+                <img src="https://lpubatangas.edu.ph/wp-content/uploads/2021/06/IMG_0375-scaled.jpg" alt="Bachelor of Science in Tourism Management">
+                <h3>Bachelor of Science in Tourism Management</h3>
+                <div class="hover-description">
+                    Develops expertise in tourism planning, destination management, travel operations, cultural appreciation, and sustainable tourism development.
+                </div>
+            </div>
+            <div class="school-item">
+                <img src="https://uspf.edu.ph/assets/images/academics/20230125_TERTIARY-PROGRAM-CTEAS-POLSCI.jpg" alt="Bachelor of Arts in Political Science">
+                <h3>Bachelor of Arts in Political Science</h3>
+                <div class="hover-description">
+                    Explores political systems, governance, public policy, international relations, and prepares students for careers in government, diplomacy, and social research.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    
+    
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h3>Follow Us on</h3>
+            <a style=" text-decoration: none; color: inherit;"
+                    href="https://www.facebook.com/TCCofficialfbpage" target="_blank">
+                         <img style="margin-left: -5px;" src="https://i.ibb.co/qrR02t5/icons8-facebook-48.png" alt="tcc-fb">
+                    <p class="tcc">TALISAY CITY COLLEGE</p>
+            </a>
+            </div>
+            <div class="subscribe">
+                <h3 class="informed">Be Informed. Subscribe.</h3>
+                <input type="email" placeholder="Enter your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="PRIVACY.html" target="_blank">Privacy Policy</a>
+            <a href="PRIVACY.html" target="_blank">Terms of Use</a>
+            <a href="PRIVACY.html" target="_blank">Legal</a>
+        </div>
+        <p class="footer-links">Copyright 2024. Talisay City College. All Rights reserved. | Created by GROUP 3 | BSIT BLISS</p>
+    </footer>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+
+        // Add click event to toggle the 'active' class on the hamburger and 'show' class on the nav list
+        hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active'); // Toggle X shape
+        navList.classList.toggle('show'); // Show/Collapse nav list
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.news-container');
+        const items = document.querySelectorAll('.news-item');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const dots = document.querySelectorAll('.dot');
+    
+        let currentIndex = 0;
+    
+         // Determine items per slide based on screen width
+        const getItemsPerSlide = () => window.innerWidth <= 768 ? 1 : 2;
+        let itemsPerSlide = getItemsPerSlide();
+
+        // Update dots visibility and active state
+        function updateDots() {
+        const isMobile = window.innerWidth <= 768;
+        
+        // Show/hide dots based on screen size
+        dots.forEach((dot, index) => {
+            if (isMobile) {
+                // Show all dots on mobile
+                dot.style.display = 'inline-block';
+                dot.classList.toggle('active', index === currentIndex);
+            } else {
+                // Show only first two dots on desktop
+                if (index < 2) {
+                    dot.style.display = 'inline-block';
+                    dot.classList.toggle('active', index === Math.floor(currentIndex / 2));
+                } else {
+                    dot.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    // Slide to specific index
+    function slideTo(index) {
+        const slideWidth = items[0].offsetWidth + (window.innerWidth <= 768 ? 0 : 30);
+        container.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+        updateDots();
+    }
+
+    // Next slide
+    function nextSlide() {
+        const maxIndex = items.length - itemsPerSlide;
+        if (currentIndex < maxIndex) {
+            slideTo(currentIndex + itemsPerSlide);
+        } else {
+            slideTo(0); // Loop back to start
+        }
+    }
+
+    // Previous slide
+    function prevSlide() {
+        if (currentIndex > 0) {
+            slideTo(currentIndex - itemsPerSlide);
+        } else {
+            slideTo(items.length - itemsPerSlide); // Loop to end
+        }
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                slideTo(index);
+            } else {
+                slideTo(index * 2);
+            }
+        });
+    });
+
+    // Handle responsive layouts
+    window.addEventListener('resize', () => {
+        itemsPerSlide = getItemsPerSlide();
+        updateDots();
+        slideTo(Math.floor(currentIndex / itemsPerSlide) * itemsPerSlide);
+    });
+
+    // Initialize dots on page load
+    updateDots();
+});
+    </script>
+</body>
+</html>

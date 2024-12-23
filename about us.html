@@ -1,0 +1,878 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="icon" type="https://i.ibb.co/7yStqyv/sdadasd.png" href="https://i.ibb.co/7yStqyv/sdadasd.png"> <!-- FAVICON  TO SHOW TCC LOGO-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- para automatic mo adjsut sa phone screen ang website-->
+        <meta charset="UTF-8">
+        <title>Talisay City College</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                
+            }
+            body {
+                background-color: #f0f0f0;
+                display: flex; /* Use flexbox layout */
+                flex-direction: column; /* Stack elements vertically */
+                min-height: 100vh;
+            }
+            main {
+                flex: 1; /* Allow main content to grow and fill space */
+                display: flex;
+                flex-direction: column;
+            }
+            .header {
+                background-color: #158BDA;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .tcc-headlogo {
+                margin-left: 164px;
+                width: 100px;
+                height: 100px;
+                transition: all 0.3s ease; /* Added para sa smooth transition */
+                cursor: pointer; /* adds hand cursor kung e hover */
+            }
+            .tccportal{
+                margin-left: 800px;
+            }
+            .address {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            .tcc {
+                margin-top: -35px;
+                font-size: 18px;
+                margin-left: 50px;
+            }
+            .tcc:hover{
+                color: #DE9532;
+                transition: all 0.3s ease;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                flex: 1;
+            }
+            .logo img {
+                width: 100px;
+                height: 100px;
+                margin-right: 10px;
+            }
+            .logo h1 {
+                font-size: 24px;
+                color: #000;
+            }
+            .contact-btn {
+                background-color: #DE9532;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 164px;
+                transition: all 0.3s ease; /* mag Add ug smooth transition */
+            }   
+            .contact-btn:hover {
+                background-color: #00AF26;
+                transform: scale(1.2);
+                color: white;
+            }
+            nav {
+                background-color: #1f98e9;
+                padding: 10px 0;
+            }   
+
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                font-size: 24px;
+            }
+
+            nav ul li {
+                margin: 0 35px;
+            }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                transition: all 0.3s ease; /* Added transition for smooth effect */
+                display: inline-block; /* Added to make transform work */
+            }
+            nav ul li a[href="about us.html"] h4 {
+                color: #DE9532;
+            }
+
+            /* Hover effect */
+            nav ul li a:hover {
+                color: #DE9532;
+                transform: scale(1.2); /* Added scale transform */
+            }
+
+            /* Active link */
+            nav ul li a.active {
+                color: #DE9532;
+            }
+            .tccportal {
+                font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+                white-space: nowrap; /* Prevent text wrapping */
+                transition: all 0.3s ease; /* Smooth transition for all changes */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                margin: 0;
+                padding: 0 15px;
+                }
+
+            /* Single hover effect on My TCCe Portal */
+            .tccportal:hover {
+                color: #DE9532;
+                transform: scale(1.2);
+                transition: all 0.3s ease;
+            }
+            .tccportal .my-tcce {
+                color: #de9532;
+            }
+            .tccportal .portal {
+                color: black;
+            }
+            .container{
+                flex: 1;
+                max-width: 1224px;
+                height: 500px;
+                width: 90%;
+                margin: auto;
+                padding: 40px 0;
+            }
+            footer {
+                background-color: #158BDA;
+                color: #fff;
+                padding: 20px;
+                margin-top: auto;
+            }
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                flex-wrap: wrap;
+            }
+            .social-media, .subscribe {
+                flex: 1;
+                margin-bottom: 20px;
+                
+            }
+            .informed{
+                margin-bottom: 10px;
+            }
+            .subscribe input[type="email"] {
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+                width: 70%;
+            }
+            .subscribe button {
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+                background-color: #DE9532;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+            }
+            .subscribe button:hover{
+                background-color: #00AF26;
+                transition: all 0.3s ease;
+            }
+            .footer-links {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .footer-links a {
+                color: #fff;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+            .footer-links p {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+            .hamburger:hover {
+            color: #DE9532; /* Change color on hover */
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .hero {
+                height: 60vh;
+                background-image: url('https://i.ibb.co/MPQ2kMq/BG-TCC.jpg');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                position: relative;
+                border-radius: 5px;
+            }   
+
+            .hero-title {
+                font-size: 7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                text-align: center;
+            }
+
+            .content {
+                max-width: 1200px;
+                margin: 4rem auto;
+                padding: 0 2rem;
+            }
+
+            .glance-section {
+                padding: 2rem 0;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+            }
+
+            .glance-title {
+                text-align: center;
+                font-size: 2rem;
+                color: #158BDA;
+                margin-bottom: 2rem;
+            }
+
+            .stats-container {
+                display: flex;
+                justify-content: space-around;
+                max-width: 1200px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .stat-item {
+                flex: 1;
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 3.5rem;
+                font-weight: bold;
+                color:#DE9532;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-description {
+                color: black;
+                font-size: 1rem;
+            }
+
+            .info-section {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+
+            .info-card {
+                background-color: white;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .info-card h2 {
+                color: #1f98e9;
+                text-align: center;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .info-card p {
+                color: black;
+                line-height: 1.6;
+                text-align: justify;
+            }
+
+            .motto-section {
+                background-color: white;
+                color:white;
+                text-align: center;
+                padding: 3rem 0;
+                margin-top: 2rem;
+                border-radius: 5px;
+            }
+
+            .motto-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: #158BDA;
+            }
+
+            .motto-text {
+                font-size: 2.5rem;
+                font-style: italic;
+            }
+
+            @media (max-width: 768px) {
+                .stats-container {
+                    flex-direction: column;
+                }
+                
+                .info-section {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .motto-section img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+        object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+        .motto-section img {
+            width: 80%;
+            max-width: 400px;
+        }
+    }
+
+
+
+
+            /*FOR PHONE ORIENTATION*/
+
+        @media (max-width: 768px) {
+            nav{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            max-height: 80vh;
+            background-color: #1F98E9;
+            width: 100%;
+        }
+        .nav-list{
+            position: sticky;
+            top: 0;
+            background-color: #1F98E9;
+            z-index: 100;
+            max-height: 80vh;
+        }
+                .hamburger {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 22px;
+        margin-right: 10px;
+        text-align: right; /* Align the hamburger to the right */
+        float: right; /* Float the hamburger to the right */
+    }
+
+        .hamburger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: 0.3s ease;
+        }
+
+        /* Position the lines */
+        .hamburger span:nth-child(1) {
+        top: 0;
+        }
+        .hamburger span:nth-child(2) {
+        top: 9px;
+        }
+        .hamburger span:nth-child(3) {
+        top: 18px;
+        }
+
+        /* Hover effect */
+        .hamburger:hover span {
+        background-color: #DE9532;
+        }
+
+        /* Transform into an X when active */
+        .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+        }
+        .hamburger.active span:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+        }
+        .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 9px;
+        }
+
+        /* Add styles for the navigation list */
+        .nav-list {
+        display: none;
+        }
+
+        .nav-list.show {
+        display: block; /* Show the nav list when the hamburger is clicked */
+        align-content: center;
+        }
+        .header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .tcc-headlogo, .contact-btn {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .address {
+            margin-left: 0;
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        nav ul {
+            display: none; /* Hide navigation menu by default */
+            flex-direction: column;
+            width: 100%;
+        }
+        nav ul.show {
+            display: flex;
+        }
+        nav ul li {
+            margin: 10px 10px ;
+        }
+        nav ul li a {
+            display: block;
+            text-align: center; /* Center text inside nav buttons */
+        }
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .tcc {
+            margin-top: 15px;
+        }
+        .tcc{
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        .informed{
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+        .container{
+            padding: 20px 0;
+        }
+        .tccportal {
+            width: 100%; /* Full width on mobile */
+            margin: 10px 0; /* Vertical spacing */
+            justify-content: center; /* Center horizontally */
+            text-align: center;
+        }
+        .about-section {
+                    grid-template-columns: 1fr;
+                }
+
+                .stats-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .hero-title {
+                    font-size: 2rem;
+                }
+
+        /* Adjust logo container for better mobile layout */
+        .logo {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        /* Updated Media Query for News Slider */
+    @media (max-width: 768px) {
+        .news-container {
+            gap: 0;
+        }
+
+        .news-item {
+            flex: 0 0 100%;
+            min-width: 100%;
+            margin-right: 0;
+        }
+
+        .news-image {
+            height: 200px;
+        }
+
+        .slider-nav {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        /* Show all four dots on mobile */
+        .slider-dots .dot {
+            display: inline-block;
+        }
+    }
+
+    /* Base styles for dots */
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hide 3rd and 4th dots by default (large screens) */
+    .dot:nth-child(3),
+    .dot:nth-child(4) {
+        display: none;
+    }
+
+    .dot.active {
+        background: #ffa000;
+    }
+
+    /* Add smooth transitions for slider */
+    .news-container {
+        transition: transform 0.4s ease-in-out;
+    }
+
+                .search-bar {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+
+
+
+                .search-input, .search-button {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+                .search-button{
+                    margin-left: -1px;
+                }
+    }
+
+            /* Media Queries for Large Screens */
+            @media (min-width: 1024px) {
+                .tcc-headlogo {
+                    width: 60px;
+                    height: 60px;
+                }
+                .contact-btn {
+                    padding: 15px 30px;
+                }
+                .hamburger {
+                display: none; /* Hide hamburger icon for large screens */
+                }
+                .tccportal {
+                margin-left: 700px; /* Adjust spacing */
+                }
+
+            
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img class="tcc-headlogo" src="https://i.ibb.co/vqJWcwZ/TCC-BG.png" alt="Talisay City College Logo">
+                <div>
+                    <h1 style="color: white;">TALISAY CITY COLLEGE</h1>
+                    <p class="address" style="color: white;" >V.H.Garces, Poblacion, Talisay, 6045 Cebu</p>
+                </div>
+                <h2 class="tccportal">
+                    <span class="my-tcce">My TCCe</span> <span class="portal">Portal</span>
+                </h2>
+            </div>
+            <a href="ContactUs.html" target="_blank">
+                <button class="contact-btn">CONTACT US</button>
+            </a>
+        </header>
+        
+        <nav>
+            <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> <!-- Hamburger Icon -->  
+        <ul class="nav-list">
+            <li><a href="index.html">
+                <h4>Home</h4></a>
+            </li>
+            <li><a href="about us.html">
+                <h4>About</h4></a>
+            </li>
+            <li><a href="History.html">
+                <h4>History</h4></a>
+            </li>
+            <li><a href="Facilities.html">
+                <h4>Facilities</h4>
+            </a></li>
+            <li><a href="CoursesOffered.html">
+                <h4>Courses Offered</h4></a>
+            </li>
+        </ul>
+        </nav>
+        <main class="content">
+            <div class="hero">
+                <h1 class="hero-title">About Us</h1>
+            </div>
+            <section class="glance-section">
+                <h1 class="glance-title">AT A GLANCE</h1>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="11">0</div>
+                        <div class="stat-description">Under Graduate Programs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-description">Years of Quality Education</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8000">0</div>
+                        <div class="stat-description">Over 8,000 Students</div>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section">
+                <div class="info-card">
+                    <h2>IDENTITY</h2>
+                    <p>Talisay City College, a government-funded institution, is dedicated to delivering quality, value-laden, and affordable education. It actively engages in community outreach and research initiatives that drive socio-economic development. With a focus on holistic curricular programs, the college aims to be a globally competitive academic institution.
+
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h2>MISSION</h2>
+                    <p>Talisay City College’s mission is propelled by the institution’s commitment to provide quality and value-laden education through affordable tertiary education, be actively involved in community outreach projects aligned in the College’s thrusts, and engage in research-based activities relevant to socio-economic development.</p>
+                </div>
+                <div class="info-card">
+                    <h2>VISION</h2>
+                    <p>TALISAY CITY COLLEGE is a globally competitive
+                        academic institution committed to meet the
+                        needs and challenges of times through
+                        excellent implementation of holistic curricular
+                        programs.</p>
+                </div>
+            </section>
+        
+            <section class="motto-section">
+                <h2 style="color: #de9532;" class="motto-title">CURRENT PRESIDENT OF TALISAY CITY COLLEGE</h2>
+                <img style="border-radius: 5px;" src="https://i.ibb.co/n6rw9XY/pres.jpg" alt="President Richel N. Bacaltos">
+                <br>
+                <br>
+                <h1 class="motto-title">DR. RICHEL N. BACALTOS</h1>
+            </section>
+
+
+        </main>
+
+        
+        
+        <footer>
+            <div class="footer-content">
+                <div class="social-media">
+                    <h3>Follow Us on</h3>
+                <a style=" text-decoration: none; color: inherit;"
+                        href="https://www.facebook.com/TCCofficialfbpage" target="_blank">
+                            <img style="margin-left: -5px;" src="https://i.ibb.co/qrR02t5/icons8-facebook-48.png" alt="tcc-fb">
+                        <p class="tcc">TALISAY CITY COLLEGE</p>
+                </a>
+                </div>
+                <div class="subscribe">
+                    <h3 class="informed">Be Informed. Subscribe.</h3>
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="PRIVACY.html" target="_blank">Privacy Policy</a>
+                <a href="PRIVACY.html" target="_blank">Terms of Use</a>
+                <a href="PRIVACY.html" target="_blank">Legal</a>
+            </div>
+            <p class="footer-links">Copyright 2024. Talisay City College. All Rights reserved. | Created by GROUP 3 | BSIT BLISS</p>
+        </footer>
+
+
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.nav-list');
+
+            // Add click event to toggle the 'active' class on the hamburger and 'show' class on the nav list
+            hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active'); // Toggle X shape
+            navList.classList.toggle('show'); // Show/Collapse nav list
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.news-container');
+            const items = document.querySelectorAll('.news-item');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const dots = document.querySelectorAll('.dot');
+        
+            let currentIndex = 0;
+        
+            // Determine items per slide based on screen width
+            const getItemsPerSlide = () => window.innerWidth <= 768 ? 1 : 2;
+            let itemsPerSlide = getItemsPerSlide();
+
+            // Update dots visibility and active state
+            function updateDots() {
+            const isMobile = window.innerWidth <= 768;
+            
+            // Show/hide dots based on screen size
+            dots.forEach((dot, index) => {
+                if (isMobile) {
+                    // Show all dots on mobile
+                    dot.style.display = 'inline-block';
+                    dot.classList.toggle('active', index === currentIndex);
+                } else {
+                    // Show only first two dots on desktop
+                    if (index < 2) {
+                        dot.style.display = 'inline-block';
+                        dot.classList.toggle('active', index === Math.floor(currentIndex / 2));
+                    } else {
+                        dot.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Slide to specific index
+        function slideTo(index) {
+            const slideWidth = items[0].offsetWidth + (window.innerWidth <= 768 ? 0 : 30);
+            container.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+            updateDots();
+        }
+
+        // Next slide
+        function nextSlide() {
+            const maxIndex = items.length - itemsPerSlide;
+            if (currentIndex < maxIndex) {
+                slideTo(currentIndex + itemsPerSlide);
+            } else {
+                slideTo(0); // Loop back to start
+            }
+        }
+
+        // Previous slide
+        function prevSlide() {
+            if (currentIndex > 0) {
+                slideTo(currentIndex - itemsPerSlide);
+            } else {
+                slideTo(items.length - itemsPerSlide); // Loop to end
+            }
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    slideTo(index);
+                } else {
+                    slideTo(index * 2);
+                }
+            });
+        });
+
+        // Handle responsive layouts
+        window.addEventListener('resize', () => {
+            itemsPerSlide = getItemsPerSlide();
+            updateDots();
+            slideTo(Math.floor(currentIndex / itemsPerSlide) * itemsPerSlide);
+        });
+
+        // Initialize dots on page load
+        updateDots();
+    });
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to animate counting
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000; // Animation duration in milliseconds
+        const steps = 50; // Number of steps in the animation
+        const stepDuration = duration / steps;
+        let current = 0;
+        
+        const increment = target / steps;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString();
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current).toLocaleString();
+            }
+        }, stepDuration);
+    }
+
+    // Function to start animation when stats are in viewport
+    function handleScroll() {
+        const stats = document.querySelectorAll('.stat-number');
+        stats.forEach(stat => {
+            if (isInViewport(stat) && !stat.classList.contains('animated')) {
+                animateCounter(stat);
+                stat.classList.add('animated');
+            }
+        });
+    }
+
+    // Add scroll event listener
+    document.addEventListener('scroll', handleScroll);
+    // Also trigger on page load
+    document.addEventListener('DOMContentLoaded', handleScroll);
+        </script>
+    </body>
+    </html>

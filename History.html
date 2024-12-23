@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="https://i.ibb.co/7yStqyv/sdadasd.png" href="https://i.ibb.co/7yStqyv/sdadasd.png"> <!-- FAVICON  TO SHOW TCC LOGO-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- para automatic mo adjsut sa phone screen ang website-->
+    <meta charset="UTF-8">
+    <title>Talisay City College</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            
+        }
+        body {
+            background-color: #f0f0f0;
+            display: flex; /* Use flexbox layout */
+            flex-direction: column; /* Stack elements vertically */
+            min-height: 100vh;
+            text-align: justify;
+            
+        }
+        main {
+            flex: 1; /* Allow main content to grow and fill space */
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #158BDA;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .tcc-headlogo {
+            margin-left: 164px;
+            width: 100px;
+            height: 100px;
+            transition: all 0.3s ease; /* Added para sa smooth transition */
+            cursor: pointer; /* adds hand cursor kung e hover */
+        }
+        .tccportal{
+            margin-left: 800px;
+        }
+        .address {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .tcc {
+            margin-top: -35px;
+            font-size: 18px;
+            margin-left: 50px;
+        }
+        .tcc:hover{
+            color: #DE9532;
+            transition: all 0.3s ease;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            font-size: 24px;
+            color: #000;
+        }
+        .contact-btn {
+            background-color: #DE9532;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 164px;
+            transition: all 0.3s ease; /* mag Add ug smooth transition */
+        }   
+        .contact-btn:hover {
+            background-color: #00AF26;
+            transform: scale(1.2);
+            color: white;
+        }
+        nav {
+            background-color: #1f98e9;
+            padding: 10px 0;
+        }   
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        nav ul li {
+            margin: 0 35px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Added transition for smooth effect */
+            display: inline-block; /* Added to make transform work */
+        }
+        nav ul li a[href="History.html"] h4 {
+            color: #DE9532;
+        }
+
+        /* Hover effect */
+        nav ul li a:hover {
+            color: #DE9532;
+            transform: scale(1.2); /* Added scale transform */
+        }
+
+        /* Active link */
+        nav ul li a.active {
+            color: #DE9532;
+        }
+        .tccportal {
+            font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+            white-space: nowrap; /* Prevent text wrapping */
+            transition: all 0.3s ease; /* Smooth transition for all changes */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0;
+            padding: 0 15px;
+            }
+
+          /* Single hover effect on My TCCe Portal */
+          .tccportal:hover {
+            color: #DE9532;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+        .tccportal .my-tcce {
+            color: #de9532;
+        }
+        .tccportal .portal {
+            color: black;
+        }
+        .container{
+            flex: 1;
+            max-width: 1224px;
+            height: 500px;
+            width: 90%;
+            margin: auto;
+            padding: 40px 0;
+        }
+        footer {
+            background-color: #158BDA;
+            color: #fff;
+            padding: 20px;
+            margin-top: auto;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .social-media, .subscribe {
+            flex: 1;
+            margin-bottom: 20px;
+            
+        }
+        .informed{
+            margin-bottom: 10px;
+        }
+        .subscribe input[type="email"] {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 70%;
+        }
+        .subscribe button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #DE9532;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .subscribe button:hover{
+            background-color: #00AF26;
+            transition: all 0.3s ease;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer-links p {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .hamburger:hover {
+        color: #DE9532; /* Change color on hover */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+                
+                header {
+                    background-color: #00509E;
+                    color: white;
+                    padding: 10px 0;
+                    text-align: center;
+                }
+                header h1 {
+                    margin: 0;
+                }
+                .content {
+                    padding: 20px;
+                    background-color: white;
+                    margin: 20px auto;
+                    max-width: 1500px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    
+                }
+                h2 {
+                    color: #000000;
+                    text-align: center;
+                }
+                p {
+                    margin: 15px 0;
+                }
+                .seal {
+                    margin-top: 20px;
+                }
+                .seal img {
+                    max-width: 300px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                .seal p {
+                    text-align: center;
+                    font-style: italic;
+                }
+          
+
+
+        /*FOR PHONE ORIENTATION*/
+
+    @media (max-width: 768px) {
+        nav{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            max-height: 80vh;
+            background-color: #1F98E9;
+            width: 100%;
+        }
+        .nav-list{
+            position: sticky;
+            top: 0;
+            background-color: #1F98E9;
+            z-index: 100;
+            max-height: 80vh;
+        }
+            .hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    margin-right: 10px;
+    text-align: right; /* Align the hamburger to the right */
+    float: right; /* Float the hamburger to the right */
+}
+
+    .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+    }
+
+    /* Position the lines */
+    .hamburger span:nth-child(1) {
+    top: 0;
+    }
+    .hamburger span:nth-child(2) {
+    top: 9px;
+    }
+    .hamburger span:nth-child(3) {
+    top: 18px;
+    }
+
+    /* Hover effect */
+    .hamburger:hover span {
+    background-color: #DE9532;
+    }
+
+    /* Transform into an X when active */
+    .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+    }
+    .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+    }
+    .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+    }
+
+    /* Add styles for the navigation list */
+    .nav-list {
+    display: none;
+    }
+
+    .nav-list.show {
+    display: block; /* Show the nav list when the hamburger is clicked */
+    align-content: center;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .tcc-headlogo, .contact-btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .address {
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+    nav ul {
+        display: none; /* Hide navigation menu by default */
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 10px ;
+    }
+    nav ul li a {
+        display: block;
+        text-align: center; /* Center text inside nav buttons */
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tcc {
+        margin-top: 15px;
+    }
+    .tcc{
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    .informed{
+        margin-bottom: 10px;
+        margin-left: 15px;
+    }
+    .container{
+        padding: 20px 0;
+    }
+    .tccportal {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Vertical spacing */
+        justify-content: center; /* Center horizontally */
+        text-align: center;
+    }
+
+    /* Adjust logo container for better mobile layout */
+    .logo {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+        /* Media Queries for Large Screens */
+        @media (min-width: 1024px) {
+            .tcc-headlogo {
+                width: 60px;
+                height: 60px;
+            }
+            .contact-btn {
+                padding: 15px 30px;
+            }
+            .hamburger {
+            display: none; /* Hide hamburger icon for large screens */
+            }
+            .tccportal {
+            margin-left: 700px; /* Adjust spacing */
+            }
+           
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="tcc-headlogo" src="https://i.ibb.co/vqJWcwZ/TCC-BG.png" alt="Talisay City College Logo">
+            <div>
+                <h1 style="color: white;">TALISAY CITY COLLEGE</h1>
+                <p class="address" style="color: white;" >V.H.Garces, Poblacion, Talisay, 6045 Cebu</p>
+            </div>
+            <h2 class="tccportal">
+                <span class="my-tcce">My TCCe</span> <span class="portal">Portal</span>
+            </h2>
+        </div>
+        <a href="ContactUs.html" target="_blank">
+            <button class="contact-btn">CONTACT US</button>
+        </a>
+    </header>
+    
+    <nav>
+        <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> <!-- Hamburger Icon -->  
+    <ul class="nav-list">
+        <li><a href="index.html">
+            <h4>Home</h4></a>
+        </li>
+        <li><a href="about us.html">
+            <h4>About</h4></a>
+        </li>
+        <li><a href="History.html">
+            <h4>History</h4></a>
+        </li>
+        <li><a href="Facilities.html">
+            <h4>Facilities</h4>
+        </a></li>
+        <li><a href="CoursesOffered.html">
+            <h4>Courses Offered</h4></a>
+        </li>
+    </ul>
+    </nav>
+    <main>
+        
+        
+        
+        <header>
+            <h1>History of Talisay City College</h1>
+            
+        </header>
+        
+        <div class="content">
+           <u><h2>Introduction</h2></u>
+            <p>A brainchild of an educator himself, Atty. Eduardo “Eddiegul” R. Gullas, Talisay City College (TCC) opened its doors to young Talisaynons in June 2004. It was established during his term as the city mayor and was later elected as a congressman.</p>
+            
+            <p>The creation of the college was made possible through Sangguniang Panlungsod Ordinance No. 2004-05 (later amended by Ordinance No. 2005-15), authored by then City Councilor Richel N. Bacaltos, who became the College President in 2016. Former Regional Director of the Civil Service Commission, Dr. Tomas L. Ramos, served as the first College Director.</p>
+            
+            <p>Due to his instrumental role in establishing the college, Atty. Eduardo R. Gullas is regarded as the “Father of Talisay City College.”</p>
+        
+        <u><h2>Early Years and Development</h2></u>
+            <p>The transfer of the seat of government to Barangay Lawaan II paved the way for TCC to occupy the old municipal hall in Barangay Poblacion. During its first year, TCC offered Bachelor in Elementary Education (BEED), Bachelor in Secondary Education (BSED), Bachelor of Science in Industrial Technology (BSIndTech), and Bachelor of Science in Nursing (BSN), with assistance from Cebu Normal University, Cebu Technological University, and the University of the Visayas.</p>
+        
+            <p>The subsequent school years saw a tremendous increase in enrolment, prompting the conversion of municipal buildings into classrooms and laboratories. The two-storey adjacent building, formerly the offices of the city engineering and city planning departments, became the Academic Building, while another building near the Cuatros Aliños monument was transformed into a Technology Building housing various rooms for mini-hotel, kitchen, electronics, and science laboratories.</p>
+        
+        <u> <h2>Program Expansion and Challenges</h2></u>
+            <p>In 2006, TCC introduced the Bachelor of Science in Hotel and Restaurant Management (now Hospitality Management) to address the demand in the hospitality industry. However, in 2011, due to financial constraints, the Board of Trustees ceased offering the nursing program.</p>
+        
+            <p>TCC’s dedication to academic excellence led to consistent top-notch results in the Licensure Examination for Teachers (LET) for five consecutive years, earning the college recognition as one of the top-performing schools in the 2012 Licensure for Teachers exam.</p>
+        
+            <p>On November 22, 2011, TCC received authorization from the Commission on Higher Education (CHED) to offer programs in Elementary Education, Secondary Education, and Industrial Technology.</p>
+        
+        <u><h2>Recent Developments and Achievements</h2></u>
+            <p>On July 1, 2016, TCC created additional offices to comply with CHED requirements, including the Students’ Affairs and Services, Prefect of Discipline, Guidance Center, Medical Clinic, Research Center, and others.</p>
+        
+            <p>In the academic year 2019-2020, TCC became part of the grantees of the Universal Access to Quality Tertiary Education Act (RA 10931), significantly increasing enrolment. In January 2019, Talisay City funded the construction of a new five-storey building for classrooms, a library, and an auditorium, with the first two floors already in use.</p>
+            <u><h2>Scholarship Offer</h2></u>
+            <p>The Institution which is housed in Talisay's Old City Hall in Barangay Poblacion, is funded by the city government which helps the student's keep tuition costs to a minimum. Besides from being affordable, the TCC is also accessible to all the Talisaynon students from their respective residence. The school also grants scholarships: one hundred percent (100%) to valedictorian and fifty percent (50%) to salutatorian. At present, it has 69 students under the Scholarship Financial Assistance.</p>
+            <u><h2>Achievements</h2></u>
+            <p>TCC has produced numerous graduates and achieved high licensure exam passing rates. Its ROTC unit has been recognized as the regional champion for three consecutive years. It is also an accredited TESDA Competency Assessment Center, producing over 1,300 NC II holders.</p>
+        <u><h2>Talisay City College Seal</h2></u>
+            <div class="seal">
+                <img src="https://i.ibb.co/SPf5h3B/tcc.jpg" alt="Talisay City College Seal">
+                <p><i>"TODO SE PASA, SOLO DIOS BASTA". “All things are passing, God is enough,”</i></p>
+            </div>
+            <p>The Talisay City College Seal symbolizes the institution's commitment to quality education for the marginalized. It features:</p>
+            <ul>
+            <li><strong>Torch and Flame</strong> – Representing the passion for knowledge, skills, and values that burns in the hearts of Talisalites.</li>
+                <li><strong>Book</strong> – The fountain of knowledge that symbolizes life-long learning experiences, creating a steady stream of young professionals.</li>
+                <li><strong>Inscription</strong> – "TODO SE PASA, SOLO DIOS BASTA" meaning “All things are passing, God is enough,” attributed to St. Teresa de Avila, the City’s Patron Saint.</li>
+                <li><strong>Laurel Leaves</strong> – Symbolizing victory, representing the pursuit of academic, spiritual, and professional excellence.</li>
+                <li><strong>Year 2004</strong> – Marking the founding year of Talisay City College.</li>
+                <li><strong>Seal Colors</strong> – Blue symbolizes fortitude and loyalty, while white represents purity and the college’s core values.</li>
+            </ul>
+        
+            
+        </div>
+        
+
+        </html>
+        
+
+
+
+    </main>
+
+    
+    
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h3>Follow Us on</h3>
+            <a style=" text-decoration: none; color: inherit;"
+                    href="https://www.facebook.com/TCCofficialfbpage" target="_blank">
+                         <img style="margin-left: -5px;" src="https://i.ibb.co/qrR02t5/icons8-facebook-48.png" alt="tcc-fb">
+                    <p class="tcc">TALISAY CITY COLLEGE</p>
+            </a>
+            </div>
+            <div class="subscribe">
+                <h3 class="informed">Be Informed. Subscribe.</h3>
+                <input type="email" placeholder="Enter your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="PRIVACY.html" target="_blank">Privacy Policy</a>
+            <a href="PRIVACY.html" target="_blank">Terms of Use</a>
+            <a href="PRIVACY.html" target="_blank">Legal</a>
+        </div>
+        <p class="footer-links">Copyright 2024. Talisay City College. All Rights reserved. | Created by GROUP 3 | BSIT BLISS</p>
+    </footer>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+
+        // Add click event to toggle the 'active' class on the hamburger and 'show' class on the nav list
+        hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active'); // Toggle X shape
+        navList.classList.toggle('show'); // Show/Collapse nav list
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.news-container');
+        const items = document.querySelectorAll('.news-item');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const dots = document.querySelectorAll('.dot');
+    
+        let currentIndex = 0;
+    
+});
+    </script>
+</body>
+</html>

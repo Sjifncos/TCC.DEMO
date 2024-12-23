@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="https://i.ibb.co/7yStqyv/sdadasd.png" href="https://i.ibb.co/7yStqyv/sdadasd.png"> <!-- FAVICON  TO SHOW TCC LOGO-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- para automatic mo adjsut sa phone screen ang website-->
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            /* Use flexbox layout */
+            flex-direction: column;
+            /* Stack elements vertically */
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #158BDA;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tcc-headlogo {
+            margin-left: 164px;
+            width: 100px;
+            height: 100px;
+            transition: all 0.3s ease;
+            /* Added para sa smooth transition */
+            cursor: pointer;
+            /* adds hand cursor kung e hover */
+        }
+
+        .tccportal {
+            margin-left: 800px;
+        }
+
+        .address {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .tcc {
+            margin-top: -35px;
+            font-size: 18px;
+            margin-left: 50px;
+        }
+
+        .tcc:hover {
+            color: #DE9532;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #000;
+        }
+
+        .contact-btn {
+            background-color: #DE9532;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 164px;
+            transition: all 0.3s ease;
+            /* mag Add ug smooth transition */
+        }
+
+        .contact-btn:hover {
+            background-color: #00AF26;
+            transform: scale(1.2);
+            color: white;
+        }
+
+        nav {
+            background-color: #1f98e9;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        nav ul li {
+            margin: 0 35px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            /* Added transition for smooth effect */
+            display: inline-block;
+            /* Added to make transform work */
+        }
+
+        nav ul li a[href="Facilities.html"] h4 {
+            color: #DE9532;
+        }
+
+        /* Hover effect */
+        nav ul li a:hover {
+            color: #DE9532;
+            transform: scale(1.2);
+            /* Added scale transform */
+        }
+
+        /* Active link */
+        nav ul li a.active {
+            color: #DE9532;
+        }
+
+        .tccportal {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            /* Responsive font size */
+            white-space: nowrap;
+            /* Prevent text wrapping */
+            transition: all 0.3s ease;
+            /* Smooth transition for all changes */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        /* Single hover effect on My TCCe Portal */
+        .tccportal:hover {
+            color: #DE9532;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+
+        .tccportal .my-tcce {
+            color: #de9532;
+        }
+
+        .tccportal .portal {
+            color: black;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1224px;
+            height: 500px;
+            width: 90%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        footer {
+            background-color: #158BDA;
+            color: #fff;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .social-media,
+        .subscribe {
+            flex: 1;
+            margin-bottom: 20px;
+
+        }
+
+        .informed {
+            margin-bottom: 10px;
+        }
+
+        .subscribe input[type="email"] {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 70%;
+        }
+
+        .subscribe button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #DE9532;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .subscribe button:hover {
+            background-color: #00AF26;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links p {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .hamburger:hover {
+            color: #DE9532;
+            /* Change color on hover */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Search Bar Styles */
+        .search-section {
+            margin-bottom: 40px;
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 12px 30px;
+            margin-left: 5px;
+            background-color: #DE9532;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .search-button:hover {
+            background-color: #00AF26;
+        }
+
+        /* Latest News Styles */
+        .latest-news-heading {
+            font-size: 28px;
+            color: #DE9532;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-slider {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .news-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 30px;
+        }
+
+        .news-item {
+            flex: 0 0 calc(50% - 15px);
+            min-width: calc(50% - 15px);
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #ffa000;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .read-more:hover {
+            color: #ff6f00;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        /* Navigation Arrows */
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: #158BDA;
+            opacity: 75%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            z-index: 10;
+            font-size: 20px;
+        }
+
+        .slider-nav:hover {
+            background: #DE9532;
+            opacity: 75%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Slider Dots */
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background: #ffa000;
+        }
+
+        .more-news-btn {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: #ffa000;
+            color: black;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .more-news-btn:hover {
+            background: #00AF26;
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .events-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 20px;
+            color: #ff9800;
+            margin-bottom: 15px;
+            text-decoration: none;
+        }
+
+        .event-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .event-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .event-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 12px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #158BDA;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+            color: #00AF26;
+        }
+
+        .programs-section {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #158BDA, #DE9532);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .school-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .school-item {
+            flex: 0 1 calc(33.333% - 20px);
+            /* 3 items per row with gap */
+            max-width: 350px;
+            min-width: 250px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .school-item:hover {
+            transform: scale(1.05);
+        }
+
+        .school-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .school-item h3 {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .school-item .hover-description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #158bda48;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .school-item:hover .hover-description {
+            opacity: 1;
+        }
+
+        .school-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 1024px) {
+            .school-item {
+                flex: 0 1 calc(50% - 20px);
+                /* 2 items per row */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .school-item {
+                flex: 0 1 100%;
+                /* 1 item per row */
+                max-width: 100%;
+            }
+        }
+
+
+        /*FOR PHONE ORIENTATION*/
+
+        @media (max-width: 768px) {
+            nav{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            max-height: 80vh;
+            background-color: #1F98E9;
+            width: 100%;
+        }
+        .nav-list{
+            position: sticky;
+            top: 0;
+            background-color: #1F98E9;
+            z-index: 100;
+            max-height: 80vh;
+        }
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                position: relative;
+                width: 30px;
+                height: 22px;
+                margin-right: 10px;
+                text-align: right;
+                /* Align the hamburger to the right */
+                float: right;
+                /* Float the hamburger to the right */
+            }
+
+            .hamburger span {
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                background-color: #fff;
+                border-radius: 2px;
+                transition: 0.3s ease;
+            }
+
+            /* Position the lines */
+            .hamburger span:nth-child(1) {
+                top: 0;
+            }
+
+            .hamburger span:nth-child(2) {
+                top: 9px;
+            }
+
+            .hamburger span:nth-child(3) {
+                top: 18px;
+            }
+
+            /* Hover effect */
+            .hamburger:hover span {
+                background-color: #DE9532;
+            }
+
+            /* Transform into an X when active */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+                /* Hide the middle line */
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 9px;
+            }
+
+            /* Add styles for the navigation list */
+            .nav-list {
+                display: none;
+            }
+
+            .nav-list.show {
+                display: block;
+                /* Show the nav list when the hamburger is clicked */
+                align-content: center;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .tcc-headlogo,
+            .contact-btn {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .address {
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .photo-gallery {
+                flex-direction: column;
+
+            }
+
+            nav ul {
+                display: none;
+                /* Hide navigation menu by default */
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 10px;
+            }
+
+            nav ul li a {
+                display: block;
+                text-align: center;
+                /* Center text inside nav buttons */
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tcc {
+                margin-top: 15px;
+            }
+
+            .tcc {
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+
+            .informed {
+                margin-bottom: 10px;
+                margin-left: 15px;
+            }
+
+            .container {
+                padding: 20px 0;
+            }
+
+            .tccportal {
+                width: 100%;
+                /* Full width on mobile */
+                margin: 10px 0;
+                /* Vertical spacing */
+                justify-content: center;
+                /* Center horizontally */
+                text-align: center;
+            }
+
+            /* Adjust logo container for better mobile layout */
+            .logo {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* Updated Media Query for News Slider */
+            @media (max-width: 768px) {
+                .news-container {
+                    gap: 0;
+                }
+
+                .news-item {
+                    flex: 0 0 100%;
+                    min-width: 100%;
+                    margin-right: 0;
+                }
+
+                .news-image {
+                    height: 200px;
+                }
+
+                .slider-nav {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 16px;
+                }
+
+                .prev {
+                    left: 5px;
+                }
+
+                .next {
+                    right: 5px;
+                }
+
+                /* Show all four dots on mobile */
+                .slider-dots .dot {
+                    display: inline-block;
+                }
+            }
+
+            /* Base styles for dots */
+            .slider-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 20px;
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #ddd;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            /* Hide 3rd and 4th dots by default (large screens) */
+            .dot:nth-child(3),
+            .dot:nth-child(4) {
+                display: none;
+            }
+
+            .dot.active {
+                background: #ffa000;
+            }
+
+            /* Add smooth transitions for slider */
+            .news-container {
+                transition: transform 0.4s ease-in-out;
+            }
+
+            .search-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+
+
+
+            .search-input,
+            .search-button {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            .search-button {
+                margin-left: -1px;
+            }
+        }
+
+        /* Media Queries for Large Screens */
+        @media (min-width: 1024px) {
+            .tcc-headlogo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .contact-btn {
+                padding: 15px 30px;
+            }
+
+            .hamburger {
+                display: none;
+                /* Hide hamburger icon for large screens */
+            }
+
+            .tccportal {
+                margin-left: 700px;
+                /* Adjust spacing */
+            }
+
+
+        }
+
+
+        main {
+            background: linear-gradient(135deg, #158BDA, #DE9532);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .card p {
+            margin: 0 10px 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="tcc-headlogo" src="https://i.ibb.co/vqJWcwZ/TCC-BG.png" alt="Talisay City College Logo">
+            <div>
+                <h1 style="color: white;">TALISAY CITY COLLEGE</h1>
+                <p class="address" style="color: white;">V.H.Garces, Poblacion, Talisay, 6045 Cebu</p>
+            </div>
+            <h2 class="tccportal">
+                <span class="my-tcce">My TCCe</span> <span class="portal">Portal</span>
+            </h2>
+        </div>
+        <a href="ContactUs.html" target="_blank">
+            <button class="contact-btn">CONTACT US</button>
+        </a>
+    </header>
+
+    <nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> <!-- Hamburger Icon -->
+        <ul class="nav-list">
+            <li><a href="index.html">
+                    <h4>Home</h4>
+                </a>
+            </li>
+            <li><a href="about us.html">
+                    <h4>About</h4>
+                </a>
+            </li>
+            <li><a href="History.html">
+                    <h4>History</h4>
+                </a>
+
+            </li>
+            <li><a href="Facilities.html">
+                    <h4>Facilities</h4>
+                </a></li>
+            <li><a href="CoursesOffered.html">
+                    <h4>Courses Offered</h4>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://i.ibb.co/z53bGjC/comlab.jpg" alt="Card Image 1">
+                <h3>Computer Labaratory</h3>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://i.ibb.co/dc1DrRC/library.jpg" alt="Card Image 2">
+                <h3>Library</h3>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://i.ibb.co/4wkSLVx/hm-building.jpg" alt="Card Image 3">
+                <h3>Hm Building</h3>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://i.ibb.co/m6h5Ybm/pres-office.jpg" alt="Card Image 4">
+                <h3>President Office</h3>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://i.ibb.co/pZBKkJG/conference.jpg" alt="Card Image 5">
+                <h3>Conference Hall</h3>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="https://i.ibb.co/wJTByB9/deans.jpg" alt="Card Image 6">
+                <h3>Deans Office</h3>
+            </div>
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="https://i.ibb.co/Qfc9zh7/sas.jpg" alt="Card Image 7">
+                <h3>Office of Student's Affairs and Services</h3>
+            </div>
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="https://i.ibb.co/g3ZcpsP/faculty.jpg" alt="Card Image 8">
+                <h3>Faculty Office</h3>
+            </div>
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="https://i.ibb.co/LCHbXmF/registry.jpg" alt="Card Image 9">
+                <h3>Registrar Office</h3>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h3>Follow Us on</h3>
+                <a style=" text-decoration: none; color: inherit;" href="https://www.facebook.com/TCCofficialfbpage"
+                    target="_blank">
+                    <img style="margin-left: -5px;" src="https://i.ibb.co/qrR02t5/icons8-facebook-48.png" alt="tcc-fb">
+                    <p class="tcc">TALISAY CITY COLLEGE</p>
+                </a>
+            </div>
+            <div class="subscribe">
+                <h3 class="informed">Be Informed. Subscribe.</h3>
+                <input type="email" placeholder="Enter your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="PRIVACY.html" target="_blank">Privacy Policy</a>
+            <a href="PRIVACY.html" target="_blank">Terms of Use</a>
+            <a href="PRIVACY.html" target="_blank">Legal</a>
+        </div>
+        <p class="footer-links">Copyright 2024. Talisay City College. All Rights reserved. | Created by GROUP 3 | BSIT
+            BLISS</p>
+    </footer>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+
+        // Add click event to toggle the 'active' class on the hamburger and 'show' class on the nav list
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active'); // Toggle X shape
+            navList.classList.toggle('show'); // Show/Collapse nav list
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.news-container');
+            const items = document.querySelectorAll('.news-item');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const dots = document.querySelectorAll('.dot');
+
+            let currentIndex = 0;
+
+            // Determine items per slide based on screen width
+            const getItemsPerSlide = () => window.innerWidth <= 768 ? 1 : 2;
+            let itemsPerSlide = getItemsPerSlide();
+
+            // Update dots visibility and active state
+            function updateDots() {
+                const isMobile = window.innerWidth <= 768;
+
+                // Show/hide dots based on screen size
+                dots.forEach((dot, index) => {
+                    if (isMobile) {
+                        // Show all dots on mobile
+                        dot.style.display = 'inline-block';
+                        dot.classList.toggle('active', index === currentIndex);
+                    } else {
+                        // Show only first two dots on desktop
+                        if (index < 2) {
+                            dot.style.display = 'inline-block';
+                            dot.classList.toggle('active', index === Math.floor(currentIndex / 2));
+                        } else {
+                            dot.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            // Slide to specific index
+            function slideTo(index) {
+                const slideWidth = items[0].offsetWidth + (window.innerWidth <= 768 ? 0 : 30);
+                container.style.transform = `translateX(-${index * slideWidth}px)`;
+                currentIndex = index;
+                updateDots();
+            }
+
+            // Next slide
+            function nextSlide() {
+                const maxIndex = items.length - itemsPerSlide;
+                if (currentIndex < maxIndex) {
+                    slideTo(currentIndex + itemsPerSlide);
+                } else {
+                    slideTo(0); // Loop back to start
+                }
+            }
+
+            // Previous slide
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    slideTo(currentIndex - itemsPerSlide);
+                } else {
+                    slideTo(items.length - itemsPerSlide); // Loop to end
+                }
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const isMobile = window.innerWidth <= 768;
+                    if (isMobile) {
+                        slideTo(index);
+                    } else {
+                        slideTo(index * 2);
+                    }
+                });
+            });
+
+            // Handle responsive layouts
+            window.addEventListener('resize', () => {
+                itemsPerSlide = getItemsPerSlide();
+                updateDots();
+                slideTo(Math.floor(currentIndex / itemsPerSlide) * itemsPerSlide);
+            });
+
+            // Initialize dots on page load
+            updateDots();
+        });
+    </script>
+</body>
+
+</html>
